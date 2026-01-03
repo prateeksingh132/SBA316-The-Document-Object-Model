@@ -1,6 +1,5 @@
 
-// Objectives
-
+///// Objectives from assignment doc
 // You will create a small single-page web application.
 // Use DOM properties, methods, and techniques to create a web application that provides a dynamic user experience.
 // Use BOM properties, methods, and techniques to facilitate creation of a dynamic web application.
@@ -10,7 +9,23 @@
 //////// WHAT I KNOW:
 // Its supposed to be a single page website
 // Combine topics of HTML/CSS and Javascript/DOM/BOM
-// 
+
+// GOAL: i am gonna create a single page application for GadgetShack, my tech ecommerce website that i created for SBA 307.
+// This page should not reload, but content should change.
+
+// Things to keep in mind:
+// 1. Use DOM methods (createElement, appendChild)
+// 2. Validate forms (dont let empty password submit)
+// 3. Make it look good (use SBA 307 styles)
+// 4. Use BOM properties (window, alert)
+
+// Things to keep in mind (from dylan/lecture):
+// 1. Get elements first using querySelector or getElementById.
+// 2. Use Event Listeners (click, submit, etc).
+// 3. Prevent default form submission behavior.
+// 4. Use DOM properties to modify the page (innerHTML, style, classList).
+// 5. Use BOM properties.
+
 
 
 //////////////////////////////////// SBA 316
