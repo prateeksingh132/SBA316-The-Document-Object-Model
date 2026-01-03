@@ -11,10 +11,41 @@
 
 <body>
 
-    
+    <!-- Gadgetshack registration form -->
 
+    <div id="app">
 
-    <h1>My Website Name</h1>
+        <header class="form-header">
+            <h1>GadgetShack</h1>
+            <p>Join the Elite Tech Club</p>
+        </header>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+                <label for="user">Username</label>
+                <input type="text" id="user" name="user" placeholder="Create a username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="xxx@xxx.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="pass" minlength="5" placeholder="5+ characters" required>
+            </div>
+
+            <div class="input-group">
+                <label for="passConfirm">Confirm Password</label>
+                <input type="password" id="passConfirm" name="passConfirm" placeholder="Re-enter password" required>
+            </div>
+
+            <button type="submit" id="submitBtn">Create Account</button>
+        </form>
+
+    </div>
 
 
 </body>

@@ -9,12 +9,13 @@
 //////// WHAT I KNOW:
 // Its supposed to be a single page website
 // Combine topics of HTML/CSS and Javascript/DOM/BOM
+// The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right  
 
 // GOAL: i am gonna create a single page application for GadgetShack, my tech ecommerce website that i created for SBA 307.
 // GOAL: This page for my ecommerce website, GadgetShack, will be a registration form, where user can enter their username, email and password
 // GOAL: This page should not reload, but content should change.
 // GOAL: Make sure it satisfy all the DOM/BOM/Validation requirement mentioned in the doc, --> that will be in my script.
-// GOAL: Focus more on User experience: Since its a single page, maybe focus more of styling, it should look good
+// GOAL: Focus more on User experience: Since its a single page, maybe focus more of styling, it should look good (do it later when i have time)
 
 // Things to keep in mind:
 // 1. Use DOM methods (createElement, appendChild)
@@ -29,6 +30,10 @@
 // 4. Use DOM properties to modify the page (innerHTML, style, classList).
 // 5. Use BOM properties.
 
+////////LOGIC - step by step
+// 1. Create a simple registration form in index.html, dont make it complicated, keep it simple
+// 2. Create simple styling for this form page. Remember: The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right  
+// 
 
 
 //////////////////////////////////// SBA 316
