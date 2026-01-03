@@ -13,6 +13,7 @@
 // GOAL: i am gonna create a single page application for GadgetShack, my tech ecommerce website that i created for SBA 307.
 // GOAL: This page for my ecommerce website, GadgetShack, will be a registration form, where user can enter their username, email and password
 // GOAL: This page should not reload, but content should change.
+// GOAL: Make sure it satisfy all the DOM/BOM/Validation requirement mentioned in the doc, --> that will be in my script.
 // GOAL: Focus more on User experience: Since its a single page, maybe focus more of styling, it should look good
 
 // Things to keep in mind:
