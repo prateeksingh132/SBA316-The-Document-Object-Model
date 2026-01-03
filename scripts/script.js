@@ -11,7 +11,9 @@
 // Combine topics of HTML/CSS and Javascript/DOM/BOM
 
 // GOAL: i am gonna create a single page application for GadgetShack, my tech ecommerce website that i created for SBA 307.
-// This page should not reload, but content should change.
+// GOAL: This page for my ecommerce website, GadgetShack, will be a registration form, where user can enter their username, email and password
+// GOAL: This page should not reload, but content should change.
+// GOAL: Focus more on User experience: Since its a single page, maybe focus more of styling, it should look good
 
 // Things to keep in mind:
 // 1. Use DOM methods (createElement, appendChild)
@@ -19,7 +21,7 @@
 // 3. Make it look good (use SBA 307 styles)
 // 4. Use BOM properties (window, alert)
 
-// Things to keep in mind (from dylan/lecture):
+// Remember (from dylan/lecture):
 // 1. Get elements first using querySelector or getElementById.
 // 2. Use Event Listeners (click, submit, etc).
 // 3. Prevent default form submission behavior.
@@ -33,3 +35,4 @@
 console.log("\n");
 console.log("////////////// SBA 316: The Document Object Model ////////////// ");
 console.log("\n");
+
