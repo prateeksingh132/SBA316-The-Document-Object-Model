@@ -41,7 +41,8 @@
 /// 5. DOM Creation: If everything is good, i need to create a new element. which shows a successful submission, maybe like a 'Success Card'. It is not in HTML, so i will have to create it using createElement().
 /// 6. This success card will have a heading, some text and a CLOSE button (important, think of logic here how to acheive this).
 /// 7. So, i will need to use appendChild() to put the text inside the card, and then put the card inside the dynamicMessageArea div, which i created in the HTML.
-
+/// 8. VERY IMPORTANT: The close button needs to work. when clicked, it should remove the success card. (Think of how to get this working)
+/// 
 
 ////////LOGIC - step by step
 // 1. Create a simple registration form in index.html, dont make it complicated, keep it simple
