@@ -46,8 +46,8 @@
 
 ////////LOGIC - step by step
 // 1. Create a simple registration form in index.html, dont make it complicated, keep it simple
-// 2. Create simple styling for this form page. Remember: The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right  
-// 
+// 2. Create simple styling for this form page. Remember: The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right. Keep the styling similar to SBA 307 GadgetShack, dark blue and orage theme.  
+// 3. 
 
 
 //////////////////////////////////// SBA 316

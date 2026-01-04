@@ -1,10 +1,15 @@
+
+/* STEP 2 */
+/* Goal: Keep the styling similar to SBA 307 GadgetShack, dark blue and orage theme, 
+/* add some animation, keep it simple */
+
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     box-sizing: border-box;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 *,
@@ -13,3 +18,102 @@ body {
     box-sizing: inherit;
 }
 
+
+/* -------------- Main Page Styling --------------*/
+/* Goal: center the form in the middle of the screen */
+body {
+    /* FUTUREWORK: explore different cool fonts style */
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    /* Use the GadgetShack colors (Dark Blue) from SBA 307 but make it a cool gradient */
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    
+    display: flex;
+
+    /* getting the form in the middle of the page*/
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+}
+
+/* -------------- The main form div -------------- */
+#registerPage {
+    background-color: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;/* rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* it gives floating shadow effect */
+
+    /* FUTUREWORK: Check for more cool,animation later */
+}
+
+/* -------------- Header Styling -------------- */
+/* Goal: it should match SBA 307 page styling */ 
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f4f4f4; /* little grey line under the title*/
+    padding-bottom: 10px;
+}
+
+.form-header h1 {
+    color: #2c3e50; /* From sba 307 color gradient : GadgetShack Blue */
+    /* I need to remove the default space aroung the GagetShack text*/
+    margin: 0;
+}
+
+.form-header p {
+    color: #7f8c8d; /* kind of grey text */
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+}
+
+/* -------------- Input Styling -------------- */
+.input-group {
+    margin-bottom: 15px; /* space between input boxes */
+}
+
+label {
+    /* I need labels like username to sit above the input boxes, display block achieves that*/
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #292929; /* dark grey */
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dfdddd;/* light grey border */
+    border-radius: 6px; /* rounded corner */
+    /* Animation 1: I need the border to change color SLOWLY when clicked, border color added in input focus below */
+    transition: border-color 0.3s;/* smooth color change */
+}
+
+/* Animation 1: Effect when input is clicked */
+/* Animation 1: Similar to SBA 307, input border should change color to orange when clicked after a period of 0.3 sec */
+input:focus {
+    outline: none; /* browser adds its default color blue, i need to remove that so that i can get my orange color animation */
+    border-color: #e67e22; /* GadgetShack Orange when you click inside */
+}
+
+/* -------------- Button Styling -------------- */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e67e22; /* similar to sba 307 GadgetShack, orange */
+    color: white;
+    /* remove the default border */
+    border: none;
+    border-radius: 6px; /* similar rounded  corners as inputs so that they all look similar */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer; /* it shows hand finger cursor */
+    /* Animation 2: change color when I hover over the button */
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Animation 2: Hover on button effect */
+button:hover {
+    background-color: #d35400; /* darker orange */
+    transform: translateY(-2px); /* slight lift effect, moves it up by 2 pixels */
+}
