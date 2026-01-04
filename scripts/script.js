@@ -45,14 +45,22 @@
 /// 
 
 ////////LOGIC - step by step
-// 1. Create a simple registration form in index.html, dont make it complicated, keep it simple
-// 2. Create simple styling for this form page. Remember: The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right. Keep the styling similar to SBA 307 GadgetShack, dark blue and orage theme.  
-// 3. 
+// Step 1. Create a simple registration form in index.html, dont make it complicated, keep it simple
+// Step 2. Create simple styling for this form page. Remember: The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right. Keep the styling similar to SBA 307 GadgetShack, dark blue and orage theme.  
+// Step 3. Script work: get the dom elements
+// Step 4: 
 
 
 //////////////////////////////////// SBA 316
 
 console.log("\n");
 console.log("////////////// SBA 316: The Document Object Model ////////////// ");
+console.log("\n");
+
+/////// Step 3: 
+// Getting the required DOM elements first
+// Goal: I need to select the form and inputs so that I can use them later.
+// I should just simply use getElementById or querySelector as its one of the requirment as well.
+console.log("Step 3: Getting the required DOM elements first... ");
 console.log("\n");
 
