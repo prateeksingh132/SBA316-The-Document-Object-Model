@@ -26,7 +26,7 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
     /* Use the GadgetShack colors (Dark Blue) from SBA 307 but make it a cool gradient */
     background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    
+
     display: flex;
 
     /* getting the form in the middle of the page*/
@@ -113,6 +113,7 @@ button {
 }
 
 /* Animation 2: Hover on button effect */
+/* change color to darker orange when I hover over the button */
 button:hover {
     background-color: #d35400; /* darker orange */
     transform: translateY(-2px); /* slight lift effect, moves it up by 2 pixels */
