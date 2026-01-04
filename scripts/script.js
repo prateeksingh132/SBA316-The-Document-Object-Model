@@ -75,3 +75,17 @@ const passConfirmInput = document.getElementById('passConfirm');
 // Requirement: Use querySelector.
 // I am using querySelector here to grab the div where i will put the message.
 const messageArea = document.querySelector('dynamicMessageArea');
+
+
+/////// Step 4: 
+// using BOM (Browser Object Model) 
+// Requirement: use at least one BOM property or method.
+// Goal: i wannna to check if the user is on a small screen (mobile).
+// i am just logging it for now, but in a real app I might show a different layout (maybe for capstone?).
+
+console.log(`Window Width is: ${window.innerWidth}`);
+
+if (window.innerWidth < 600) {
+    console.log("using BOM (Browser Object Model)");
+    console.log("Note: user is on a mobile sized screen.");
+}
