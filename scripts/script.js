@@ -64,3 +64,14 @@ console.log("\n");
 console.log("Step 3: Getting the required DOM elements first... ");
 console.log("\n");
 
+const registerPage = document.getElementById('registerPage');
+const registerForm = document.getElementById('registerForm');
+const userInput = document.getElementById('user');
+const emailInput = document.getElementById('email');
+const passInput = document.getElementById('pass');
+const passConfirmInput = document.getElementById('passConfirm');
+
+
+// Requirement: Use querySelector.
+// I am using querySelector here to grab the div where i will put the message.
+const messageArea = document.querySelector('dynamicMessageArea');
