@@ -235,9 +235,9 @@ registerForm.addEventListener('submit', function (event) {
     //console.log('TESTING: allInputs: ', allInputs);
     ////////////
 
-    for(let i=0;i<allInputs.length;i++){
+    for (let i = 0; i < allInputs.length; i++) {
         allInputs[i].value = '';
-    } 
+    }
 
 
 
@@ -277,8 +277,8 @@ registerForm.addEventListener('submit', function (event) {
 // Requirement: include input with DOM event-based validation.
 // Goal: i have to create another event listener for this requirement, i chose input event so that i can get real-time feedback. If username is too short ( like < 3), make outline orange.
 
-userInput.addEventListener('input', function(inputEvent) {
-    
+userInput.addEventListener('input', function (inputEvent) {
+
     //console.log("User is typing...");
 
     ////////////TESTING
@@ -288,15 +288,31 @@ userInput.addEventListener('input', function(inputEvent) {
     ////////////TESTING
     // console.log('TESTING: userInput.value.length: ', userInput.value.length);
     ////////////TESTING
-    
+
 
     // Requirement: Modify at least one attribute of an element in response to user interaction.
-    // i am changing the style of the input in response to the input event
+    // Requirement: Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
+    // i am changing the style of the input in response to the input event. i beleive it should satisfy both the requirements. i have also added additional attribute modification (email placeholder)
     if (userInput.value.length < 3) {
         // show warning color
-        userInput.style.borderColor = "orange"; 
+        userInput.style.borderColor = "orange";
     } else {
         // show good color
         userInput.style.borderColor = "#2ecc71"; // green
     }
+});
+
+
+// Requirement: Modify at least one attribute of an element in response to user interaction.
+// Goal: I will change the placeholdertext inside the email when user click it and change it back to default text when user click outside
+// I used stackoverflow example here: https://stackoverflow.com/questions/65393033/how-to-remove-placeholder-text-in-javascript
+
+// when user clicks in the email input, change the placeholder to Example: kumarpks132@gmail.com
+emailInput.addEventListener('focus', function (emailInputEvent) {
+    emailInput.setAttribute('placeholder', 'Example: kumarpks132@gmail.com');
+});
+
+// change it back to default xxx@xxx.com when they click outside 
+emailInput.addEventListener('blur', function (emailInputEvent) {
+    emailInput.setAttribute('placeholder', 'xxx@xxx.com');
 });

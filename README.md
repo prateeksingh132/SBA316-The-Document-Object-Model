@@ -12,7 +12,7 @@ This is a project for the DOM Manipulation assessment. I decided to continue wit
 * **Form Validation:** I used both HTML validation (`required`, `minlength`) and Javascript logic to check if the password and confirm password fields match.
 * **Real-time Feedback:** The username input changes color (orange to green) as you type, using the `input` event listener.
 * **Navigate between parent-child:** I used `parentNode` in the close button event listener so that i can look up the DOM tree and remove the success message card.
-* **Event Listeners:** I used 3 event listeners (submit, click and input) to handle different actions.
+* **Event Listeners:** I used 5 event listeners (submit, click, input, focus and blur) to handle different actions.
 * I checked if user is on mobile or desktop (using `window.innerWidth` in BOM). I also used `window.alert` for error message.
 * I used a blue and orange color theme (similar to SBA 307) so that i can integrate these two projects later on.
 
@@ -59,3 +59,13 @@ I have created (and used during code creation) test points (log statement) at mu
 (3) **BOM:** `window.innerWidth` is very useful for checking if the user is on mobile or regular desktop.
 
 (4) **Testing:** Keep the testing console logs (`///////TESTING`) during code development, it really helps to see if the event listener is actually firing or not.
+
+
+
+# References
+
+I referred some examples from stackoverflow. Here is the link:
+
+https://stackoverflow.com/questions/65393033/how-to-remove-placeholder-text-in-javascript
+
+
