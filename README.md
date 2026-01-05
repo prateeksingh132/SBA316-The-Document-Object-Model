@@ -64,8 +64,12 @@ I have created (and used during code creation) test points (log statement) at mu
 
 # References
 
-I referred some examples from stackoverflow. Here is the link:
+I referred some examples from stackoverflow and lecture slides (codesandbox examples). Here are the link:
 
 https://stackoverflow.com/questions/65393033/how-to-remove-placeholder-text-in-javascript
+
+https://codesandbox.io/p/sandbox/documentfragment-example-t3dj56?file=%2Fsrc%2Findex.js%3A16%2C24-16%2C35&from-embed
+
+
 
 
