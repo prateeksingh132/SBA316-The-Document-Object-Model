@@ -118,6 +118,7 @@ if (window.innerWidth < 600) {
 // using event listeners and form validation logic
 // Goal: Listen for the 'submit' event on the form.
 // Important: i need to use event.preventDefault() otherwise when the page refreshes i will lose my data.
+// the browser refreshes by default, preventDefault stops that
 
 registerForm.addEventListener('submit', function (event) {
 
@@ -126,7 +127,7 @@ registerForm.addEventListener('submit', function (event) {
     ////////////
 
     // preventing default refresh behavior
-    event.preventDefault();
+    //event.preventDefault();
 
     console.log("Form submitted... Starting validation check.");
 
@@ -245,7 +246,7 @@ registerForm.addEventListener('submit', function (event) {
     // Goal: when the 'Close' is clicked, i am gonna remove the success message.
 
 
-    ////// Requirement: iterate/navigate using parentNode.
+    ////// Requirement: iterate/navigate between parent-child.
 
     closeBtn.addEventListener('click', function (closeEvent) {
         // DOM Traversal: i am gonna find the parent of the button (which is the successCard div)
