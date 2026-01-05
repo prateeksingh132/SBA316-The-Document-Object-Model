@@ -249,6 +249,8 @@ registerForm.addEventListener('submit', function (event) {
         ////////////
 
         console.log("Success message removed using parentNode.");
+
+        console.log("Form successfully submitted...");
     });
 
 });
