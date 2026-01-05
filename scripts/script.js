@@ -44,11 +44,31 @@
 /// 8. VERY IMPORTANT: The close button needs to work. when clicked, it should remove the success card. (Think of how to get this working)
 /// 
 
+
 ////////LOGIC - step by step
 // Step 1. Create a simple registration form in index.html, dont make it complicated, keep it simple
 // Step 2. Create simple styling for this form page. Remember: The main gist of this SBA is showing usage of DOM/BOM/Form validation in JS script, the HTML and CSS styling is secondary (I will beautify the page when I have time), but I wanna make sure first that I get the requirement mentioned in the doc right. Keep the styling similar to SBA 307 GadgetShack, dark blue and orage theme.  
 // Step 3. Script work: get the dom elements
-// Step 4: 
+// Step 4: use BOM methods
+///// Step 5: using event listeners and form validation logic: /////
+// inside the event listener (submit), first, start with preventDefault() to stop reload.
+// get the values from the input fields (username, password, confirm password) and store them in variables.
+// validation check: if password !== confirmPassword, then its an error.
+// if error: change the border style of input to red. show a window.alert() message. and return (stop the function).
+// if no error: reset the style back to the default one.
+//////// start DOM MANIPULATION (Step 6): 
+// create a new div element (successCard). add a class to it for styling.
+// create h3 element for welcome message. add text content.
+// create p element for details. add text content.
+// create a button element (closeBtn). add text content.
+// append h3, p, and button to the successCard div.
+// finally, append the successCard to the messageArea div in the HTML.
+// clear the form inputs.
+/////// Traversal logic (Step 7):
+// add a click event listener to the new close button.
+// inside this listener, find the parent of the button using .parentNode property.
+// remove that parent from the messageArea using .removeChild().
+//
 
 
 //////////////////////////////////// SBA 316
@@ -74,13 +94,13 @@ const passConfirmInput = document.getElementById('passConfirm');
 
 // Requirement: Use querySelector.
 // I am using querySelector here to grab the div where i will put the message.
-const messageArea = document.querySelector('dynamicMessageArea');
+const messageArea = document.querySelector('#dynamicMessageArea');
 
 
 /////// Step 4: 
 // using BOM (Browser Object Model) 
 // Requirement: use at least one BOM property or method.
-// Goal: i wannna to check if the user is on a small screen (mobile).
+// Goal: i wannna check if the user is on a small screen (mobile).
 // i am just logging it for now, but in a real app I might show a different layout (maybe for capstone?).
 
 console.log(`Window Width is: ${window.innerWidth}`);
@@ -89,3 +109,147 @@ if (window.innerWidth < 600) {
     console.log("using BOM (Browser Object Model)");
     console.log("Note: user is on a mobile sized screen.");
 }
+
+
+
+
+//////// Step 5: 
+// using event listeners and form validation logic
+// Goal: Listen for the 'submit' event on the form.
+// Important: i need to use event.preventDefault() otherwise when the page refreshes i will lose my data.
+
+registerForm.addEventListener('submit', function (event) {
+
+    ////////////TESTING
+    //console.log('TESTING: event: ', event);
+    ////////////
+
+    // preventing default refresh behavior
+    event.preventDefault();
+
+    console.log("Form submitted... Starting validation check.");
+
+    // Step 5a: form validation logic
+    // i need to check if passwords match.
+
+    const passwordValue = passInput.value;
+    const confirmValue = passConfirmInput.value;
+    const usernameValue = userInput.value;
+
+    ////////////TESTING
+    // console.log('TESTING: passwordValue: ', passwordValue);
+    // console.log('TESTING: confirmValue: ', confirmValue);
+    // console.log('TESTING: usernameValue: ', usernameValue);
+    ////////////
+
+    ////// Error Handling Check:
+    // if passwords don't match, i need to show an error and STOP the function.
+    if (passwordValue !== confirmValue) {
+        console.log("Error: Passwords do not match.");
+
+        // Requirement: Modify style or class using DOM
+        // Goal: i will change the border to red to show visually the error.
+        passConfirmInput.style.border = "2px solid red";
+        passConfirmInput.style.backgroundColor = "#ffe6e6";
+
+        // Requirement: Use BOM method (window.alert)
+        window.alert("Error: Passwords do not match. Please try again.");
+        return; // this stop the function here.
+    }
+
+    // now, if we get here, this means validation passed.
+    // so now, we just reset the styles just in case they were red from a previous error
+    passConfirmInput.style.border = "2px solid #dfdddd";
+    passConfirmInput.style.backgroundColor = "white";
+
+
+
+    /////////// Step 6: 
+    // DOM Manipulation (adding elements)
+    // Goal: i am gonna create a "Success Card" and add it to the dynamicMessageArea div.
+
+
+    ///// Requirement: Create element, append element, modify textContent.
+
+    // 1. create the main container div
+    const successCard = document.createElement('div');
+
+    // 2. add class for styling (i added the .success-card in css)
+    successCard.classList.add('success-card');
+
+
+    ////////////TESTING
+    //console.log('TESTING: successCard: ', successCard);
+    ////////////
+
+    // 3. create the heading
+    const heading = document.createElement('h3');
+    // using template literal
+    heading.textContent = `Welcome, ${usernameValue}!`;
+
+    // 4. create the paragraph text
+    const para = document.createElement('p');
+    // using template literal
+    para.textContent = `You have successfully joined GadgetShack.`;
+
+    // 5. create a close button for this message
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = "Close";
+    // add class for styling (i added the .close-btn in css)
+    closeBtn.classList.add('close-btn');
+
+    // 6. append everything together (it shows parent-child relationship)
+    successCard.appendChild(heading);
+    successCard.appendChild(para);
+    successCard.appendChild(closeBtn);
+
+
+    ////////////TESTING
+    //console.log('TESTING: successCard: ', successCard);
+    ////////////
+
+    // 7. append the whole success card to the DOM (messageArea)
+    // for this, first, i have to clear any old messages so they don't mess things up
+    messageArea.innerHTML = '';
+    messageArea.appendChild(successCard);
+
+
+    ////////////TESTING
+    //console.log('TESTING: messageArea: ', messageArea);
+    ////////////
+
+    // if we are here, then i just need to clear the form inputs since we are done
+    userInput.value = '';
+    emailInput.value = '';
+    passInput.value = '';
+    passConfirmInput.value = '';
+
+
+
+    ////////// Step 7: 
+    // DOM traversal and removing elements
+    // Goal: when the 'Close' is clicked, i am gonna remove the success message.
+
+
+    ////// Requirement: iterate/navigate using parentNode.
+
+    closeBtn.addEventListener('click', function (closeEvent) {
+        // DOM Traversal: i am gonna find the parent of the button (which is the successCard div)
+        const parentDiv = closeBtn.parentNode;
+
+        ////////////TESTING
+        //console.log('TESTING: parentDiv: ', parentDiv);
+        ////////////
+
+        // DOM Removal
+        messageArea.removeChild(parentDiv);
+
+        ////////////TESTING
+        //console.log('TESTING: messageArea: ', messageArea);
+        ////////////
+
+        console.log("Success message removed using parentNode.");
+    });
+
+});
+
