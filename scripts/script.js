@@ -220,10 +220,23 @@ registerForm.addEventListener('submit', function (event) {
     ////////////
 
     // if we are here, then i just need to clear the form inputs since we are done
-    userInput.value = '';
-    emailInput.value = '';
-    passInput.value = '';
-    passConfirmInput.value = '';
+
+    // userInput.value = '';
+    // emailInput.value = '';
+    // passInput.value = '';
+    // passConfirmInput.value = '';
+
+    // Requirement: Iterate over a collection of elements to accomplish some task.
+    // Goal: so instead of clearing the inputs individually like above, i am gonna just iterate over the inputs using for-loop and will clear them. for this i will need to get all the inputs using queryselectorall.
+    const allInputs = registerForm.querySelectorAll('input');
+
+    ////////////TESTING
+    //console.log('TESTING: allInputs: ', allInputs);
+    ////////////
+
+    for(let i=0;i<allInputs.length;i++){
+        allInputs[i].value = '';
+    } 
 
 
 
@@ -247,7 +260,7 @@ registerForm.addEventListener('submit', function (event) {
 
         ////////////TESTING
         //console.log('TESTING: messageArea: ', messageArea);
-        c
+        ////////////
 
         console.log("Success message removed using parentNode.");
 
