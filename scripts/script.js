@@ -314,7 +314,7 @@ userInput.addEventListener('input', function (inputEvent) {
 
 // Requirement: Modify at least one attribute of an element in response to user interaction.
 // Goal: I will change the placeholdertext inside the email when user click it and change it back to default text when user click outside
-// I used stackoverflow example here: https://stackoverflow.com/questions/65393033/how-to-remove-placeholder-text-in-javascript
+// I referred this stackoverflow example here: https://stackoverflow.com/questions/65393033/how-to-remove-placeholder-text-in-javascript
 
 // when user clicks in the email input, change the placeholder to Example: kumarpks132@gmail.com
 emailInput.addEventListener('focus', function (emailInputEvent) {
