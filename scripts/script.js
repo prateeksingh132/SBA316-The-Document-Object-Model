@@ -127,7 +127,7 @@ registerForm.addEventListener('submit', function (event) {
     ////////////
 
     // preventing default refresh behavior
-    //event.preventDefault();
+    event.preventDefault();
 
     console.log("Form submitted... Starting validation check.");
 
