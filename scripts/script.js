@@ -288,9 +288,12 @@ userInput.addEventListener('input', function(inputEvent) {
     // console.log('TESTING: userInput.value.length: ', userInput.value.length);
     ////////////TESTING
     
+
+    // Requirement: Modify at least one attribute of an element in response to user interaction.
+    // i am changing the style of the input in response to the input event
     if (userInput.value.length < 3) {
         // show warning color
-        userInput.style.borderColor = "orange";
+        userInput.style.borderColor = "orange"; 
     } else {
         // show good color
         userInput.style.borderColor = "#2ecc71"; // green
