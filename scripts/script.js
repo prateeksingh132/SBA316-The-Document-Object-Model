@@ -213,7 +213,16 @@ registerForm.addEventListener('submit', function (event) {
     // 7. append the whole success card to the DOM (messageArea)
     // for this, first, i have to clear any old messages so they don't mess things up
     messageArea.innerHTML = '';
-    messageArea.appendChild(successCard);
+    //messageArea.appendChild(successCard);
+
+    // Requirement: Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content.
+    // Goal: I am gonna use the documentfragment here which is like a invisible container, to hold my successmessage card first
+    // I referred the codesandbox example mentioned in the lecture 316.1 : https://codesandbox.io/p/sandbox/documentfragment-example-t3dj56?file=%2Fsrc%2Findex.js%3A16%2C24-16%2C35&from-embed
+    const fragment = document.createDocumentFragment();
+    fragment.appendChild(successCard);
+
+    // now, i will append the fragment to the actual page.
+    messageArea.appendChild(fragment);
 
 
     ////////////TESTING
