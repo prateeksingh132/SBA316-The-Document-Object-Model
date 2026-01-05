@@ -68,6 +68,7 @@
 // add a click event listener to the new close button.
 // inside this listener, find the parent of the button using .parentNode property.
 // remove that parent from the messageArea using .removeChild().
+// Step 8: add another event listener (input event); i have to create another event listener for satisfy one of the requirements (include input with DOM event-based validation.), i chose input event so that i can get real-time feedback. If username is too short ( like < 3), make outline orange.
 //
 
 
@@ -246,7 +247,7 @@ registerForm.addEventListener('submit', function (event) {
 
         ////////////TESTING
         //console.log('TESTING: messageArea: ', messageArea);
-        ////////////
+        c
 
         console.log("Success message removed using parentNode.");
 
@@ -255,3 +256,30 @@ registerForm.addEventListener('submit', function (event) {
 
 });
 
+
+
+/////////// Step 8: 
+// Adding another event listener (input event)
+// Requirement: include input with DOM event-based validation.
+// Goal: i have to create another event listener for this requirement, i chose input event so that i can get real-time feedback. If username is too short ( like < 3), make outline orange.
+
+userInput.addEventListener('input', function(inputEvent) {
+    
+    //console.log("User is typing...");
+
+    ////////////TESTING
+    // console.log('TESTING: inputEvent: ', inputEvent);
+    ////////////TESTING
+
+    ////////////TESTING
+    // console.log('TESTING: userInput.value.length: ', userInput.value.length);
+    ////////////TESTING
+    
+    if (userInput.value.length < 3) {
+        // show warning color
+        userInput.style.borderColor = "orange";
+    } else {
+        // show good color
+        userInput.style.borderColor = "#2ecc71"; // green
+    }
+});
